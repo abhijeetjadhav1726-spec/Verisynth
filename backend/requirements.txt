@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+tensorflow==2.13.0
+opencv-python-headless
+mediapipe==0.10.14
+scikit-learn
+matplotlib
+python-multipart
+pydantic
+numpy==1.24.3
+seaborn
+Pillow
+scipy

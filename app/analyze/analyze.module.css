@@ -1,0 +1,263 @@
+.main {
+  min-height: 100vh;
+  background: var(--bg-page);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 24px 80px;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  padding: 40px;
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardHeader {
+  text-align: center;
+}
+
+.h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-btn);
+  padding: 4px;
+  gap: 4px;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  color: var(--text-secondary);
+}
+
+.tabActive {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+}
+
+/* Dropzone */
+.dropzone {
+  height: 240px;
+  border: 1.5px dashed rgba(99,91,255,0.4);
+  border-radius: var(--radius-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.dropzone:hover,
+.dragging {
+  border-color: var(--accent-primary);
+  background: rgba(99,91,255,0.04);
+}
+
+.dropIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(99,91,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+}
+
+.dropTitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.dropBrowse {
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.dropSub {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Preview */
+.preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  padding: 16px 20px;
+}
+
+.previewIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(99,91,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.previewInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.previewName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.previewMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.removeBtn {
+  background: transparent;
+  border: 1px solid var(--border-default);
+  color: var(--text-muted);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+.removeBtn:hover {
+  border-color: var(--accent-danger);
+  color: var(--accent-danger);
+}
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.loaderBar {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loaderFill {
+  height: 100%;
+  background: var(--accent-primary);
+  border-radius: 2px;
+  transition: width 0.15s ease;
+}
+
+.stageLabels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stageLabel {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.stageDone {
+  color: var(--accent-success);
+}
+
+.stageCurrent {
+  color: var(--accent-primary);
+}
+
+.stagePending {
+  color: var(--text-muted);
+}
+
+/* Analyze button */
+.analyzeBtn {
+  width: 100%;
+  height: 48px;
+  background: var(--accent-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-base);
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.analyzeBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.note {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 24px 20px;
+  }
+}
