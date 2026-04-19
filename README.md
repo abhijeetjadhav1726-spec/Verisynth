@@ -1,4 +1,4 @@
-# VeriSynth - Deepfake Detection Platform
+# Verisynth - Deepfake Detection Platform
 
 VeriSynth is a premium, production-grade deepfake detection platform. It uses a Next.js frontend for a seamless user experience and a FastAPI backend powered by TensorFlow and MobileNetV2 to analyze and detect manipulated media.
 
